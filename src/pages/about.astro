@@ -2,18 +2,22 @@
 import { ClientRouter } from "astro:transitions";
 
 ---
-
+<a href="/">Home</a>
+<a href="/about/">About</a>
+<a href="/devblog/">Dev Blog</a>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="src/styles/global.css" rel="stylesheet" />
-		<meta name="viewport" content="width=device-width" />
+    <link href="/src/styles/global.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
     <title>About</title>
 	</head>
   <body>
-    <h1>About Me</h1>
-    <p>I am Sophi Dickens. I'm a Programmer</p>
+    <div class="flex md:flex-row">
+      <h1 class="font-bold text-5xl p-10">About Me</h1>
+      <p class="pt-10 pl-5 pr-10 text-xl self-center font-bold">A hockey player who loves critical thinking and giving myself brain damage. Oh, and I'm also a full-stack developer and a musician.</p>
+    </div>
   </body>
 </html>

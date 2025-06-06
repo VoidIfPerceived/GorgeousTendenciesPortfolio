@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
-
+const pageTitle = "Developer Blog";
 ---
 <a href="/">Home</a>
 <a href="/about/">About</a>
@@ -13,11 +13,11 @@ import { ClientRouter } from "astro:transitions";
   <link href="/src/styles/global.css" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-  <title>Dev Blog</title>
+  <title>{pageTitle}</title>
 	</head>
   <body>
     <div class="flex md:flex-row">
-      <h1 class="p-10 font-bold text-5xl">Developer Blog</h1>
+      <h1 class="p-10 font-bold text-5xl">{pageTitle}</h1>
       <p class="pt-10 pl-5 pr-10 font-bold font-italics text-xl self-center">My blog to keep up with my development projects. Keep coming back for more updates for anything I develop!</p>
     </div>
     <ul>

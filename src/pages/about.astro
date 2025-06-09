@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 const pageTitle = "About Me";
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 let basicDevSkills = ["HTML", "CSS"];
 let programmingLanguages = ["JavaScript", "PHP", "C++"];
@@ -18,29 +19,32 @@ let cppFrameworks = ["JUCE"];
 		<meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 	</head>
-  <body>
+  <body class="flex flex-col h-screen justify-between">
     <Navigation />
-    <div class="flex md:flex-row">
-      <h1 class="font-bold text-5xl p-10 py-5">{pageTitle}</h1>
-      <p class="pt-10 pl-5 pr-10 pb-5 text-xl self-center font-bold">A hockey player who loves critical thinking and giving myself brain damage. Oh, and I'm also a full-stack developer and a musician.</p>
-    </div>
-    <div class="flex md:flex-row place-content-around p-10 pt-5">
-      <div class="col-span-2 p-10 pt-0">
-        <h2 class="font-bold text-3xl">Development</h2>
-        <div>
-          <p class="text-2xl text-bold">Development Skills</p>
-          <p class="text-xl text-bold">Basic Skills</p>
-          {basicDevSkills.map((skill) => <li>{skill}</li>)}
-          <p class="text-xl text-bold">Programming Languages</p>
-          {programmingLanguages.map((language) => <li>{language}</li>)}
-          <p class="text-xl text-bold">Web Frameworks</p>
-          {webFrameworks.map((framework) => <li>{framework}</li>)}
-          <p class="text-xl text-bold">CSS Libraries</p>
-          {cssLibraries.map((library) => <li>{library}</li>)}
-          <p class="text-xl text-bold">C++ Frameworks</p>
-          {cppFrameworks.map((framework) => <li>{framework}</li>)}
+    <div class="mb-auto">
+      <div class="flex md:flex-row">
+        <h1 class="font-bold text-5xl p-10 py-5">{pageTitle}</h1>
+        <p class="pt-10 pl-5 pr-10 pb-5 text-xl self-center font-bold">A hockey player who loves critical thinking and giving myself brain damage. Oh, and I'm also a full-stack developer and a musician.</p>
+      </div>
+      <div class="flex md:flex-row place-content-around p-10 pt-5">
+        <div class="col-span-2 p-10 py-0">
+          <h2 class="font-bold text-3xl">Development</h2>
+          <div>
+            <p class="text-2xl text-bold">Development Skills</p>
+            <p class="text-xl text-bold">Basic Skills</p>
+            {basicDevSkills.map((skill) => <li>{skill}</li>)}
+            <p class="text-xl text-bold">Programming Languages</p>
+            {programmingLanguages.map((language) => <li>{language}</li>)}
+            <p class="text-xl text-bold">Web Frameworks</p>
+            {webFrameworks.map((framework) => <li>{framework}</li>)}
+            <p class="text-xl text-bold">CSS Libraries</p>
+            {cssLibraries.map((library) => <li>{library}</li>)}
+            <p class="text-xl text-bold">C++ Frameworks</p>
+            {cppFrameworks.map((framework) => <li>{framework}</li>)}
+          </div>
         </div>
       </div>
     </div>
+    <Footer />
   </body>
 </html>

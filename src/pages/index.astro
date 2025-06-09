@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 const pageTitle = "Gorgeous Tendencies";
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 <html lang="en">
 	<head>
@@ -12,16 +13,19 @@ import Navigation from "../components/Navigation.astro";
 		<meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 	</head>
-  <body>
+  <body class="flex flex-col h-screen justify-between">
     <Navigation />
-    <div class="flex md:flex-row">
-      <h1 class="p-10 pt-5 self-center text-5xl font-bold">{pageTitle}</h1>
-    </div>
-    <div class="flex md:flex-row" id="links">
+    <div class="mb-auto">
+      <div class="flex md:flex-row">
+        <h1 class="p-10 pt-5 self-center text-5xl font-bold">{pageTitle}</h1>
+      </div>
+      <div class="flex md:flex-row" id="links">
 
-    </div>
-    <div class="flex md:flex-row" id="about">
+      </div>
+      <div class="flex md:flex-row" id="about">
 
+      </div>
     </div>
+    <Footer />
   </body>
 </html>

@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 const pageTitle = "Developer Blog";
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 <html lang="en">
 	<head>
@@ -12,14 +13,17 @@ import Navigation from "../components/Navigation.astro";
 		<meta name="generator" content={Astro.generator} />
   <title>{pageTitle}</title>
 	</head>
-  <body>
+  <body class="flex flex-col h-screen justify-between">
     <Navigation />
-    <div class="flex md:flex-row">
-      <h1 class="p-10 py-5 font-bold text-5xl">{pageTitle}</h1>
-      <p class="p-10 py-5 pr-10 font-bold font-italics text-xl self-center">My blog to keep up with my development projects. Keep coming back for more updates for anything I develop!</p>
+    <div class="mb-auto">
+      <div class="flex md:flex-row">
+        <h1 class="p-10 py-5 font-bold text-5xl">{pageTitle}</h1>
+        <p class="p-10 py-5 pr-10 font-bold font-italics text-xl self-center">My blog to keep up with my development projects. Keep coming back for more updates for anything I develop!</p>
+      </div>
+      <ul class="p-10">
+        <li><a href="/posts/devpost1/">First Post</a></li>
+      </ul>
     </div>
-    <ul class="p-10">
-      <li><a href="/posts/devpost1/">First Post</a></li>
-    </ul>
+    <Footer />
   </body>
 </html>

@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 const pageTitle = "Developer Blog";
+import "../styles/global.css";
 ---
 <a href="/">Home</a>
 <a href="/about/">About</a>
@@ -10,7 +11,6 @@ const pageTitle = "Developer Blog";
 	<head>
 		<meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link href="/src/styles/global.css" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
   <title>{pageTitle}</title>

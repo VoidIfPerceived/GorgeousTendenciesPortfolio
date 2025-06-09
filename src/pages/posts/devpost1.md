@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MDPostLayout.astro
 title: 'First Dev Blog Post'
 pubDate: 2025-06-05
 description: 'My first blog post, and the start of my developer blog.'
@@ -8,10 +9,6 @@ image:
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 tags: ['astro', 'development', 'JavaScript']
 ---
-# First Dev Blog Post
-
-Published on: 2025-06-05
-
 Welcome to my blog for all my development projects. This first blog post will only go over the progress I've made on this website.
 
 ## Progress

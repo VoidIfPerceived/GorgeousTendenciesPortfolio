@@ -1,6 +1,17 @@
 ---
-const { platform, username, imageLink } = Astro.props;
+const { platform, username, image } = Astro.props;
+import Github from "../../public/github-mark.svg";
+
+let source;
+
+switch (image) {
+case "Github":
+  source = Github;
+  break;
+
+}
+
 ---
 <a href={`https://www.${platform}.com/${username}`}>
-  <img src=`${imageLink}` alt=`${platform}` width="20" height="20" >
+  <img src={source.src} width="20" height="20" />
 </a>

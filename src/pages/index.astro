@@ -2,23 +2,20 @@
 import { ClientRouter } from "astro:transitions";
 const pageTitle = "Gorgeous Tendencies";
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 ---
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/devblog/">Dev Blog</a>
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="/src/styles/global.css" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 	</head>
   <body>
+    <Navigation />
     <div class="flex md:flex-row">
-      <h1 class="p-10 self-center text-5xl font-bold">{pageTitle}</h1>
+      <h1 class="p-10 pt-5 self-center text-5xl font-bold">{pageTitle}</h1>
     </div>
     <div class="flex md:flex-row" id="links">
 

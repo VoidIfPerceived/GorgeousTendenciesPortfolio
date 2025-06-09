@@ -2,6 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 const pageTitle = "About Me";
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 
 let basicDevSkills = ["HTML", "CSS"];
 let programmingLanguages = ["JavaScript", "PHP", "C++"];
@@ -9,9 +10,6 @@ let webFrameworks = ["React", "Astro"];
 let cssLibraries = ["Bootstrap", "Tailwind"];
 let cppFrameworks = ["JUCE"];
 ---
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/devblog/">Dev Blog</a>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -21,8 +19,9 @@ let cppFrameworks = ["JUCE"];
     <title>{pageTitle}</title>
 	</head>
   <body>
+    <Navigation />
     <div class="flex md:flex-row">
-      <h1 class="font-bold text-5xl p-20 pb-5">{pageTitle}</h1>
+      <h1 class="font-bold text-5xl p-10 py-5">{pageTitle}</h1>
       <p class="pt-10 pl-5 pr-10 pb-5 text-xl self-center font-bold">A hockey player who loves critical thinking and giving myself brain damage. Oh, and I'm also a full-stack developer and a musician.</p>
     </div>
     <div class="flex md:flex-row place-content-around p-10 pt-5">

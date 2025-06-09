@@ -2,11 +2,8 @@
 import { ClientRouter } from "astro:transitions";
 const pageTitle = "Developer Blog";
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 ---
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/devblog/">Dev Blog</a>
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -16,11 +13,12 @@ import "../styles/global.css";
   <title>{pageTitle}</title>
 	</head>
   <body>
+    <Navigation />
     <div class="flex md:flex-row">
-      <h1 class="p-10 font-bold text-5xl">{pageTitle}</h1>
-      <p class="pt-10 pl-5 pr-10 font-bold font-italics text-xl self-center">My blog to keep up with my development projects. Keep coming back for more updates for anything I develop!</p>
+      <h1 class="p-10 py-5 font-bold text-5xl">{pageTitle}</h1>
+      <p class="p-10 py-5 pr-10 font-bold font-italics text-xl self-center">My blog to keep up with my development projects. Keep coming back for more updates for anything I develop!</p>
     </div>
-    <ul>
+    <ul class="p-10">
       <li><a href="/posts/devpost1/">First Post</a></li>
     </ul>
   </body>

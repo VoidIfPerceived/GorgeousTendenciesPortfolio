@@ -4,23 +4,27 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta charset="utf-8" />
-<body class="flex flex-col h-screen justify-between">
+<body class="flex flex-col h-screen justify-between bg-slate-950 bg-linear-to-tr from-indigo-950 to-rose-950">
   <Header />
   <div class="mb-auto">
-    <div class="flex md:flex-row">
-      <h1 class="p-10 pt-5 self-center text-5xl font-bold">{frontmatter.title}</h1>
-      <div class="flex flex-col p-5">
-        <p class="">{frontmatter.description}</p>
+    <div class="flex max-md:flex-col md:flex-row">
+      <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} class="max-md:pb-2 md:p-10 md:py-5 md:pr-5 max-md:self-center">
+      <h1 class="max-md:pb-2 md:p-5 md:pb-5 md:pr-0 self-center text-5xl font-bold text-white">{frontmatter.title}</h1>
+      <div class="flex flex-col max-md:py-2 md:pt-10 md:p-5 md:ml-0 max-md:self-center">
+        <p class="text-white italic ">{frontmatter.description}</p>
       </div>
-      <div class="flex flex-col p-5">
-        <p>Author: {frontmatter.author}</p>
-        <p>Date: {frontmatter.pubDate}</p>
+      <div class="flex flex-col max-md:pt-3 max-md:pb-5 max-md:pl-7 md:p-10 md:pl-3 md:pr-10 text-white">
+        <p>{frontmatter.author}</p>
+        <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
       </div>
     </div>
-    <div class="p-20 py-5">
+    <div class="max-md:p-7 md:p-20 py-5 text-white">
       <slot />
     </div>
   </div>
-  <Footer />
+  <div class="place-content-center">
+    <Footer />
+  </div>
 </body>

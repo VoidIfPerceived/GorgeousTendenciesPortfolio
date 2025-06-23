@@ -3,9 +3,10 @@ import { ClientRouter } from "astro:transitions";
 const pageTitle = "Developer Blog";
 const titleSecondary = "My blog to keep up with my development projects. Keep coming back for more updates for anything I develop!";
 import SplitTitleLayout from "../layouts/SplitTitleLayout.astro";
+import DevPost1 from "./posts/devpost1.md";
+
+import BlogTable from "../components/blogTable.astro";
 ---
 <SplitTitleLayout pageTitle={pageTitle} titleSecondary={titleSecondary}>
-  <ul class="p-10">
-    <li><a href="/posts/devpost1/">First Post</a></li>
-  </ul>
+  <BlogTable dataPath="devPosts" />
 </SplitTitleLayout>

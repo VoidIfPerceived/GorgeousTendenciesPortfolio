@@ -12,12 +12,12 @@ const { pageTitle, titleSecondary } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 	</head>
-  <body class="flex flex-col h-screen justify-between">
+  <body class="flex flex-col h-screen justify-between bg-linear-to-br from-slate-900 to-slate-950">
     <Header />
     <div class="mb-auto">
-      <div class="flex md:flex-row">
-        <h1 class="font-bold text-5xl p-10 py-5">{pageTitle}</h1>
-        <p class="pt-10 pl-5 pr-10 pb-5 text-xl self-center font-bold">{titleSecondary}</p>
+      <div class="flex max-md:flex-col md:flex-row">
+        <h1 class="font-bold text-5xl p-10 py-5 text-gray-300">{pageTitle}</h1>
+        <p class="max-md:pt-5 md:pt-10 pl-5 max-md:pr-5 md:pr-10 pb-5 max-md:text-md md:text-xl self-center max-md:text-center font-bold text-gray-300">{titleSecondary}</p>
       </div>
       <slot />
     </div>

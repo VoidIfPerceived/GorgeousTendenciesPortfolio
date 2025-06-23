@@ -9,17 +9,16 @@ image:
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 tags: ['astro', 'development', 'JavaScript']
 ---
-Welcome to my blog for all my development projects. This first blog post will only go over the progress I've made on this website.
+Welcome to my blog for all my development projects. This first blog post will only go over the progress I've made on this website.<br><br>
+# **Progress**<br><br>
 
-## Progress
-
-1. **Installed Astro**: I've installed Astro onto this website.
+1. **Installed Astro**: I've installed Astro onto this website. <br>
 
 2. **Making Pages**: I've made a few pages for the website (about page, home page, devblog page). Currently these pages only have very basic content and no real connectivity.
 
-3. **Writing Blog Posts**: This blog post is the first I have written. At the time of writing, it can only be accessed by accessing the direct url for the post, as it is not displayed on any other pages at this time.
+3. **Writing Blog Posts**: This blog post is the first I have written. At the time of writing, it can only be accessed by accessing the direct url for the post, as it is not displayed on any other pages at this time.<br><br>
 
-## Goals
+## **Goals**
 
 1. Finish Astro blog tutorial.
 

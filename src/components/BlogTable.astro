@@ -18,7 +18,9 @@ const posts = Object.values(matches);
     {posts.map(( post: any ) => (
     <tr>
       <td>
-        <img width="150" alt={post.frontmatter.image.alt} src={post.frontmatter.image.url}/>
+        <div>
+          <img width="140" class="py-3" alt={post.frontmatter.image.alt} src={post.frontmatter.image.url}/>
+        </div>
       </td>
       <td class="md:pl-5 md:pr-5 max-md:pl-3 max-md:pr-3">
         <p>{post.frontmatter.title}</p>

@@ -1,13 +1,15 @@
 ---
 import { ClientRouter } from "astro:transitions";
 const pageTitle = "Gorgeous Tendencies";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import IndexLayout from "../layouts/IndexLayout.astro";
+import SectionButton from "../components/SectionButton.astro";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <div class="flex md:flex-row" id="links">
-
-  </div>
+<IndexLayout pageTitle={pageTitle}>
   <div class="flex md:flex-row" id="about">
 
   </div>
-</BaseLayout>
+  <div class="flex flex-col md:grid md:grid-cols-2" id="links">
+    <SectionButton slug="about" pageTitle="About" />
+    <SectionButton slug="devblog" pageTitle="Dev Blog" />
+  </div>
+</IndexLayout>

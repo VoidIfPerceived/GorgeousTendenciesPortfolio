@@ -1,0 +1,13 @@
+---
+let { slug, pageTitle } = Astro.props;
+
+let pageLink = "/" + slug + "/";
+
+---
+<a href={pageLink} class="p-5 m-5 max-md:mx-10 border border-indigo-950 hover:border-indigo-700 rounded-lg place-items-center text-slate-400 hover:text-slate-200">
+  <div href={pageLink} class="place-items-center">
+    <h1 class="md:text-3xl max-md:text-xl">
+      {pageTitle}
+    </h1>
+  </div>
+</a>

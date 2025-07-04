@@ -12,21 +12,28 @@ switch (dataPath) {
 const posts = Object.values(matches);
 ---
 <div class="md:p-10 max-md:p-5">
-  <table class="text-gray-300 md:text-lg max-md:text-md">
+  <div class="flex flex-col md:grid md:grid-cols-2 text-slate-400 md:text-lg max-md:text-md">
     {posts.map(( post: any ) => (
-    <tr>
-      <td>
+    <a href={post.url} class="place-items-center min-h-30 m-3 text-center">
+      <div class="flex flex-row grid grid-cols-3 place-items-center justify-items-stretch p-2 border border-slate-800 hover:border-indigo-400 hover:text-slate-200 rounded-lg min-h-36 min-w-full">
         <div>
-          <img width="140" class="py-3" alt={post.frontmatter.image.alt} src={post.frontmatter.image.url}/>
+          <div>
+            <img width="140" class="py-3 pr-5" alt={post.frontmatter.image.alt} src={post.frontmatter.image.url}/>
+          </div>
         </div>
-      </td>
-      <td class="md:pl-5 md:pr-5 max-md:pl-3 max-md:pr-3">
-        <p>{post.frontmatter.title}</p>
-      </td>
-      <td>
-        <a href={post.url} class="max-md:pr-3 md:pr-5 underline">Read More</a>
-      </td>
-    </tr>
+        <div class="flex lg:flex-row max-lg:flex-col max-md:pr-3">
+          <div class="md:pr-5 font-bold">
+            <p class="">{post.frontmatter.title}</p>
+          </div>
+          <div class="md:pr-5">
+            <p>{post.frontmatter.pubDate.toString().slice(0,10)}</p>
+          </div>
+        </div>
+        <div class="">
+          <p class="max-md:pr-3 md:pr-5 underline">Read More</p>
+        </div>
+      </div>
+    </a>
     ))}
-  </table>
+  </div>
 </div>

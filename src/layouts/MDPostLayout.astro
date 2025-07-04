@@ -3,7 +3,7 @@ const { frontmatter } = Astro.props;
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Post from "../components/Post.astro"
+import Prose from "../components/Prose.astro";
 ---
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta charset="utf-8" />
@@ -22,9 +22,9 @@ import Post from "../components/Post.astro"
       </div>
     </div>
     <div class="max-md:p-7 md:p-20 py-5 text-white">
-      <Post>
+      <Prose>
         <slot />
-      <Post/>
+      </Prose>
     </div>
   </div>
   <div class="place-content-center">
